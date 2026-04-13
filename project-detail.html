@@ -29,35 +29,47 @@
     </nav>
   </div>
 
-  <main class="section">
+  <main class="section project-detail-main">
     <div class="container reveal">
-      <div class="section-head"><span class="chapter-no">PX</span><h1 id="detailTitle">Project Experience</h1></div>
+      <div class="section-head">
+        <span class="chapter-no">PX</span>
+        <h1 id="detailTitle">Project Experience</h1>
+      </div>
+      <p class="description project-detail-back"><a class="btn secondary" href="projects.html">← Back to projects</a></p>
     </div>
 
     <section class="section project-immersive-top reveal">
-      <div class="three-stage-full">
-        <model-viewer
-          id="detailModelViewer"
-          class="detail-model-viewer"
-          camera-controls
-          auto-rotate
-          scale="1.45 1.45 1.45"
-          camera-orbit="20deg 72deg 65%"
-          field-of-view="24deg"
-          shadow-intensity="1"
-          exposure="1.1"
-          interaction-prompt="none"
-          alt="3D project model"
-        ></model-viewer>
+      <div class="container project-detail-hero-grid">
+        <div class="detail-image-hero-shell">
+          <div class="detail-image-hero-frame">
+            <img id="detailImage" alt="Project photography" data-lightbox loading="lazy" />
+          </div>
+          <p class="detail-image-hero-caption">Project photography</p>
+        </div>
+        <div class="project-detail-model-column">
+          <p class="detail-model-hint" id="detailModelHint">Interactive 3D loads when this section is in view to keep the page light.</p>
+          <div class="three-stage-full three-stage-full--detail">
+            <model-viewer
+              id="detailModelViewer"
+              class="detail-model-viewer"
+              camera-controls
+              auto-rotate
+              scale="1.45 1.45 1.45"
+              camera-orbit="20deg 72deg 65%"
+              field-of-view="24deg"
+              shadow-intensity="1"
+              exposure="1.1"
+              interaction-prompt="none"
+              alt="3D project model"
+            ></model-viewer>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container project-detail-stage reveal">
-        <div class="hero-visual detail-image-panel">
-          <img id="detailImage" alt="Project visual" />
-        </div>
-        <div class="card">
+        <div class="card project-detail-narrative">
           <h2>Project Narrative</h2>
           <p class="description" id="detailDescription"></p>
           <div class="data-strip project-modal-strip">
@@ -67,7 +79,7 @@
             <span id="detailTeam"></span>
           </div>
           <p class="model-placeholder">
-            Interactive 3D experience: drag to orbit, scroll to zoom, right-drag to pan.
+            Drag to orbit, scroll to zoom, right-drag to pan once the 3D model has finished loading.
           </p>
         </div>
       </div>

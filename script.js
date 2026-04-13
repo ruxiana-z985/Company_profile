@@ -71,7 +71,7 @@ if (filterRow && projectItems.length > 0) {
     projectItems.forEach((project) => {
       const category = project.dataset.category || "";
       const show = selected === "all" || selected === category;
-      project.style.display = show ? "block" : "none";
+      project.style.display = show ? "" : "none";
     });
   });
 }
@@ -153,24 +153,55 @@ if (detailTitle) {
   });
 
   const detailImage = document.getElementById("detailImage");
-  if (detailImage) detailImage.setAttribute("src", get("image", ""));
+  const imageSrc = get("image", "");
+  if (detailImage) {
+    if (imageSrc) detailImage.setAttribute("src", imageSrc);
+    else detailImage.removeAttribute("src");
+  }
 
   const detailModelViewer = document.getElementById("detailModelViewer");
+  const detailModelHint = document.getElementById("detailModelHint");
   if (detailModelViewer) {
-    detailModelViewer.setAttribute("src", get("model", "3d_assets/Hitem3d-1776090506237.glb"));
-    detailModelViewer.addEventListener("load", () => {
+    const modelSrc = get("model", "3d_assets/Hitem3d-1776090506237.glb");
+    if (imageSrc) detailModelViewer.setAttribute("poster", imageSrc);
+
+    const applyModelTint = () => {
       const tint = [0.68, 0.68, 0.66];
       const materials = detailModelViewer.model?.materials || [];
-
       materials.forEach((material) => {
         const pbr = material.pbrMetallicRoughness;
         if (!pbr) return;
-
         pbr.setBaseColorFactor(tint);
         pbr.setMetallicFactor(0.18);
         pbr.setRoughnessFactor(0.72);
       });
-    }, { once: true });
+    };
+
+    const startModelLoad = () => {
+      if (detailModelViewer.dataset.lazyModelApplied === "1") return;
+      detailModelViewer.dataset.lazyModelApplied = "1";
+      detailModelViewer.setAttribute("src", modelSrc);
+      detailModelViewer.addEventListener("load", () => {
+        applyModelTint();
+        if (detailModelHint) detailModelHint.textContent = "Interactive 3D is ready—orbit, zoom, and inspect the model.";
+      }, { once: true });
+    };
+
+    const heroMount = document.querySelector(".project-detail-hero-grid");
+    if (heroMount && "IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            startModelLoad();
+            io.disconnect();
+          }
+        },
+        { rootMargin: "180px 0px", threshold: 0.06 }
+      );
+      io.observe(heroMount);
+    } else {
+      startModelLoad();
+    }
   }
 }
 

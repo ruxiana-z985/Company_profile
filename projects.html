@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <div class="top-progress"><div class="top-progress-bar" id="topProgressBar"></div></div>
@@ -29,10 +28,54 @@
     </nav>
   </div>
 
-  <main class="section">
+  <main class="section projects-main">
     <div class="container reveal">
       <div class="section-head"><span class="chapter-no">03</span><h1>Projects</h1></div>
       <p class="description"><strong>Projects Description:</strong> Every project is framed as challenge and solution, supported by data strips and visuals that communicate technical depth, delivery confidence, and social impact.</p>
+    </div>
+
+    <section class="projects-building-gallery-band reveal" aria-labelledby="building-gallery-title">
+      <div class="building-mosaic">
+        <header class="building-mosaic__hero-copy">
+          <p class="eyebrow">Built volume</p>
+          <h2 id="building-gallery-title" class="building-mosaic__title">Form <span class="building-mosaic__title-accent">Atlas</span></h2>
+          <p class="building-mosaic__lede">A geometric gallery of façades, towers, and engineered massing—scroll on to explore full case studies.</p>
+          <div class="building-mosaic__rule" aria-hidden="true"></div>
+        </header>
+        <figure class="building-mosaic__tile building-mosaic__tile--a">
+          <div class="building-mosaic__frame">
+            <img data-lightbox src="Images/Building%201.png" alt="Architectural project building view 1" loading="lazy" />
+          </div>
+        </figure>
+        <figure class="building-mosaic__tile building-mosaic__tile--b">
+          <div class="building-mosaic__frame">
+            <img data-lightbox src="Images/Building%202.png" alt="Architectural project building view 2" loading="lazy" />
+          </div>
+        </figure>
+        <figure class="building-mosaic__tile building-mosaic__tile--c">
+          <div class="building-mosaic__frame">
+            <img data-lightbox src="Images/Building%203.png" alt="Architectural project building view 3" loading="lazy" />
+          </div>
+        </figure>
+        <figure class="building-mosaic__tile building-mosaic__tile--d">
+          <div class="building-mosaic__frame">
+            <img data-lightbox src="Images/Building%204.png" alt="Architectural project building view 4" loading="lazy" />
+          </div>
+        </figure>
+        <figure class="building-mosaic__tile building-mosaic__tile--e">
+          <div class="building-mosaic__frame">
+            <img data-lightbox src="Images/Building%205.png" alt="Architectural project building view 5" loading="lazy" />
+          </div>
+        </figure>
+        <figure class="building-mosaic__tile building-mosaic__tile--f">
+          <div class="building-mosaic__frame">
+            <img data-lightbox src="Images/Building%206.png" alt="Architectural project building view 6" loading="lazy" />
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <div class="container reveal">
       <div class="filters" id="projectFilters">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="buildings">Buildings</button>
@@ -40,78 +83,152 @@
         <button class="filter-btn" data-filter="terminals">Terminals</button>
         <button class="filter-btn" data-filter="irrigation">Irrigation</button>
       </div>
-      <div class="project-grid">
-        <article class="project reveal" data-project-id="kebede-mixed-use" data-category="buildings" data-project-title="Kebede Mixed Use G+34" data-project-image="https://images.unsplash.com/photo-1465877783223-4eba513e27c6?auto=format&fit=crop&w=1600&q=80" data-project-model="3d_assets/Hitem3d-1776093811783.glb" data-project-location="Addis Ababa, Ethiopia" data-project-value="6.6B ETB" data-project-duration="3 Months" data-project-team="9 Staff" data-project-description="A high-rise mixed-use statement project requiring precise multidisciplinary coordination, rapid design development, and bid-ready technical confidence for a large urban footprint.">
-          <div class="project-mini-stage">
-            <model-viewer class="project-mini-model" src="3d_assets/Hitem3d-1776093811783.glb" auto-rotate camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.8" camera-orbit="18deg 78deg 85%" field-of-view="26deg" alt="Kebede mixed-use 3D model"></model-viewer>
+      <div class="project-grid project-grid--creative">
+        <article
+          class="project project--layout-kebede reveal"
+          data-project-id="kebede-mixed-use"
+          data-category="buildings"
+          data-project-title="Kebede Mixed Use G+34"
+          data-project-image="Images/KEBEDE MIXED USE.png"
+          data-project-model="3d_assets/Hitem3d-1776093811783.glb"
+          data-project-location="Addis Ababa, Ethiopia"
+          data-project-value="6.6B ETB"
+          data-project-duration="3 Months"
+          data-project-team="9 Staff"
+          data-project-description="A high-rise mixed-use statement project requiring precise multidisciplinary coordination, rapid design development, and bid-ready technical confidence for a large urban footprint."
+        >
+          <div class="project-card-visual project-card-visual--skew">
+            <span class="project-card-index" aria-hidden="true">01</span>
+            <img src="Images/KEBEDE%20MIXED%20USE.png" alt="Kebede Mixed Use G+34" loading="lazy" width="900" height="600" />
           </div>
-          <h3>Kebede Mixed Use G+34</h3>
-          <p><strong>Challenge:</strong> premium mixed-use tower with compressed timeline and system-heavy coordination.<br /><strong>Solution:</strong> integrated multidisciplinary design package and bid-ready documentation.</p>
-          <div class="data-strip"><span>Addis Ababa</span><span>6.6B ETB</span><span>3 Months</span></div>
-          <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          <div class="project-card-copy">
+            <h3>Kebede Mixed Use G+34</h3>
+            <p><strong>Challenge:</strong> premium mixed-use tower with compressed timeline and system-heavy coordination.<br /><strong>Solution:</strong> integrated multidisciplinary design package and bid-ready documentation.</p>
+            <div class="data-strip"><span>Addis Ababa</span><span>6.6B ETB</span><span>3 Months</span></div>
+            <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          </div>
         </article>
-        <article class="project reveal" data-project-id="ali-birra-hospital" data-category="buildings" data-project-title="Dr. Ar. Ali Birra General Hospital" data-project-image="https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=1600&q=80" data-project-model="3d_assets/Hitem3d-1776090506237.glb" data-project-location="Haramaya, Ethiopia" data-project-value="2.8B ETB" data-project-duration="5 Months" data-project-team="13 Staff" data-project-description="Healthcare infrastructure that demanded disciplined quality control and complete A/E coordination to align clinical functionality, safety, and long-term operational resilience.">
-          <div class="project-mini-stage">
-            <model-viewer class="project-mini-model" src="3d_assets/Hitem3d-1776090506237.glb" auto-rotate camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.8" camera-orbit="16deg 76deg 82%" field-of-view="28deg" alt="Ali Birra Hospital 3D model"></model-viewer>
+        <article
+          class="project project--layout-ali reveal"
+          data-project-id="ali-birra-hospital"
+          data-category="buildings"
+          data-project-title="Dr. Ar. Ali Birra General Hospital"
+          data-project-image="Images/Building 6.png"
+          data-project-model="3d_assets/Hitem3d-1776090506237.glb"
+          data-project-location="Haramaya, Ethiopia"
+          data-project-value="2.8B ETB"
+          data-project-duration="5 Months"
+          data-project-team="13 Staff"
+          data-project-description="Healthcare infrastructure that demanded disciplined quality control and complete A/E coordination to align clinical functionality, safety, and long-term operational resilience."
+        >
+          <div class="project-card-visual project-card-visual--slice">
+            <span class="project-card-index" aria-hidden="true">02</span>
+            <img src="Images/Building%206.png" alt="Dr. Ar. Ali Birra General Hospital" loading="lazy" width="900" height="600" />
           </div>
-          <h3>Dr. Ar. Ali Birra General Hospital</h3>
-          <p><strong>Challenge:</strong> high-value healthcare infrastructure requiring robust QA and supervision.<br /><strong>Solution:</strong> full architectural and engineering package with contract administration.</p>
-          <div class="data-strip"><span>Haramaya</span><span>2.8B ETB</span><span>13 Staff</span></div>
-          <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          <div class="project-card-copy">
+            <h3>Dr. Ar. Ali Birra General Hospital</h3>
+            <p><strong>Challenge:</strong> high-value healthcare infrastructure requiring robust QA and supervision.<br /><strong>Solution:</strong> full architectural and engineering package with contract administration.</p>
+            <div class="data-strip"><span>Haramaya</span><span>2.8B ETB</span><span>13 Staff</span></div>
+            <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          </div>
         </article>
-        <article class="project reveal" data-project-id="axum-airport" data-category="terminals" data-project-title="Axum International Airport" data-project-image="https://images.unsplash.com/photo-1474302770737-173ee21bab63?auto=format&fit=crop&w=1600&q=80" data-project-model="3d_assets/Hitem3d-1776090506237.glb" data-project-location="Axum, Tigray, Ethiopia" data-project-value="290M ETB" data-project-duration="5 Months" data-project-team="10 Staff" data-project-description="An airport terminal and airfield package built to balance operational flow, maintenance practicality, and a gateway identity that represents place with confidence.">
-          <div class="project-mini-stage">
-            <model-viewer class="project-mini-model" src="3d_assets/Hitem3d-1776090506237.glb" auto-rotate camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.8" camera-orbit="22deg 74deg 88%" field-of-view="27deg" alt="Axum airport 3D model"></model-viewer>
+        <article
+          class="project project--layout-axum reveal"
+          data-project-id="axum-airport"
+          data-category="terminals"
+          data-project-title="Axum International Airport"
+          data-project-image="Images/Axum international.png"
+          data-project-model="3d_assets/Hitem3d-1776090506237.glb"
+          data-project-location="Axum, Tigray, Ethiopia"
+          data-project-value="290M ETB"
+          data-project-duration="5 Months"
+          data-project-team="10 Staff"
+          data-project-description="An airport terminal and airfield package built to balance operational flow, maintenance practicality, and a gateway identity that represents place with confidence."
+        >
+          <div class="project-card-visual project-card-visual--wedge">
+            <span class="project-card-index" aria-hidden="true">03</span>
+            <img src="Images/Axum%20international.png" alt="Axum International Airport" loading="lazy" width="900" height="600" />
           </div>
-          <h3>Axum International Airport</h3>
-          <p><strong>Challenge:</strong> airport terminal ecosystem balancing regional identity and operational performance.<br /><strong>Solution:</strong> integrated architectural, mechanical, and maintenance-ready systems.</p>
-          <div class="data-strip"><span>Axum</span><span>290M ETB</span><span>10 Staff</span></div>
-          <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          <div class="project-card-copy">
+            <h3>Axum International Airport</h3>
+            <p><strong>Challenge:</strong> airport terminal ecosystem balancing regional identity and operational performance.<br /><strong>Solution:</strong> integrated architectural, mechanical, and maintenance-ready systems.</p>
+            <div class="data-strip"><span>Axum</span><span>290M ETB</span><span>10 Staff</span></div>
+            <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          </div>
         </article>
-        <article class="project reveal" data-project-id="sidama-bridge" data-category="infrastructure" data-project-title="Sidama Bridge Program" data-project-image="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1600&q=80" data-project-model="3d_assets/Hitem3d-1776090506237.glb" data-project-location="Sidama Region, Ethiopia" data-project-value="Bridge Package" data-project-duration="Program-Based" data-project-team="Multi-Site Engineering Team" data-project-description="Supplementary bridge engineering across multiple locations, executed with authority-level rigor and detail packages that support clear approvals and practical execution.">
-          <div class="project-mini-stage">
-            <model-viewer class="project-mini-model" src="3d_assets/Hitem3d-1776090506237.glb" auto-rotate camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.8" camera-orbit="-12deg 79deg 90%" field-of-view="26deg" alt="Sidama bridge 3D model"></model-viewer>
+        <article
+          class="project project--layout-sidama reveal"
+          data-project-id="sidama-bridge"
+          data-category="infrastructure"
+          data-project-title="Sidama Bridge Program"
+          data-project-image="Images/sidama bridge.png"
+          data-project-model="3d_assets/Hitem3d-1776090506237.glb"
+          data-project-location="Sidama Region, Ethiopia"
+          data-project-value="Bridge Package"
+          data-project-duration="Program-Based"
+          data-project-team="Multi-Site Engineering Team"
+          data-project-description="Supplementary bridge engineering across multiple locations, executed with authority-level rigor and detail packages that support clear approvals and practical execution."
+        >
+          <div class="project-card-visual project-card-visual--shard">
+            <span class="project-card-index" aria-hidden="true">04</span>
+            <img src="Images/sidama%20bridge.png" alt="Sidama Bridge Program" loading="lazy" width="900" height="600" />
           </div>
-          <h3>Sidama Bridge Program</h3>
-          <p><strong>Challenge:</strong> supplementary detail engineering for multiple bridge points under authority standards.<br /><strong>Solution:</strong> disciplined engineering estimates and detail packages.</p>
-          <div class="data-strip"><span>Sidama</span><span>Bridge Package</span><span>Authority Led</span></div>
-          <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          <div class="project-card-copy">
+            <h3>Sidama Bridge Program</h3>
+            <p><strong>Challenge:</strong> supplementary detail engineering for multiple bridge points under authority standards.<br /><strong>Solution:</strong> disciplined engineering estimates and detail packages.</p>
+            <div class="data-strip"><span>Sidama</span><span>Bridge Package</span><span>Authority Led</span></div>
+            <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          </div>
         </article>
-        <article class="project reveal" data-project-id="tiya-suten-heritage" data-category="infrastructure" data-project-title="Tiya-Suten Heritage Development" data-project-image="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80" data-project-model="3d_assets/Hitem3d-1776090506237.glb" data-project-location="Tiya Town, Ethiopia" data-project-value="Heritage Infrastructure" data-project-duration="Design + Supervision" data-project-team="9 Staff" data-project-description="Tourism-oriented infrastructure within a culturally sensitive environment, combining architectural landscape design with technical documents and supervision structure.">
-          <div class="project-mini-stage">
-            <model-viewer class="project-mini-model" src="3d_assets/Hitem3d-1776090506237.glb" auto-rotate camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.8" camera-orbit="10deg 77deg 86%" field-of-view="28deg" alt="Tiya Suten heritage 3D model"></model-viewer>
+        <article
+          class="project project--layout-tiya reveal"
+          data-project-id="tiya-suten-heritage"
+          data-category="infrastructure"
+          data-project-title="Tiya-Suten Heritage Development"
+          data-project-image="Images/tiya-suten.png"
+          data-project-model="3d_assets/Hitem3d-1776090506237.glb"
+          data-project-location="Tiya Town, Ethiopia"
+          data-project-value="Heritage Infrastructure"
+          data-project-duration="Design + Supervision"
+          data-project-team="9 Staff"
+          data-project-description="Tourism-oriented infrastructure within a culturally sensitive environment, combining architectural landscape design with technical documents and supervision structure."
+        >
+          <div class="project-card-visual project-card-visual--beam">
+            <span class="project-card-index" aria-hidden="true">05</span>
+            <img src="Images/tiya-suten.png" alt="Tiya-Suten Heritage Development" loading="lazy" width="900" height="600" />
           </div>
-          <h3>Tiya-Suten Heritage Development</h3>
-          <p><strong>Challenge:</strong> tourism infrastructure in a sensitive heritage context.<br /><strong>Solution:</strong> architectural landscape and engineering design with supervision framework.</p>
-          <div class="data-strip"><span>Tiya Town</span><span>Heritage Site</span><span>9 Staff</span></div>
-          <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          <div class="project-card-copy">
+            <h3>Tiya-Suten Heritage Development</h3>
+            <p><strong>Challenge:</strong> tourism infrastructure in a sensitive heritage context.<br /><strong>Solution:</strong> architectural landscape and engineering design with supervision framework.</p>
+            <div class="data-strip"><span>Tiya Town</span><span>Heritage Site</span><span>9 Staff</span></div>
+            <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          </div>
         </article>
-        <article class="project reveal" data-project-id="irrigation-program" data-category="irrigation" data-project-title="Irrigation Works Program" data-project-image="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1600&q=80" data-project-model="3d_assets/Hitem3d-1776090506237.glb" data-project-location="Ethiopia" data-project-value="Hydraulic Infrastructure" data-project-duration="Multi-Phase" data-project-team="Hydraulic + Civil Team" data-project-description="Resilience-oriented irrigation systems designed for agricultural productivity and long-term ecological balance through staged hydraulic implementation.">
-          <div class="project-mini-stage">
-            <model-viewer class="project-mini-model" src="3d_assets/Hitem3d-1776090506237.glb" auto-rotate camera-controls disable-pan interaction-prompt="none" shadow-intensity="0.8" camera-orbit="-18deg 76deg 88%" field-of-view="27deg" alt="Irrigation works 3D model"></model-viewer>
+        <article
+          class="project project--layout-irrigation reveal"
+          data-project-id="irrigation-program"
+          data-category="irrigation"
+          data-project-title="Irrigation Works Program"
+          data-project-image="Images/Irrigation.png"
+          data-project-model="3d_assets/Hitem3d-1776090506237.glb"
+          data-project-location="Ethiopia"
+          data-project-value="Hydraulic Infrastructure"
+          data-project-duration="Multi-Phase"
+          data-project-team="Hydraulic + Civil Team"
+          data-project-description="Resilience-oriented irrigation systems designed for agricultural productivity and long-term ecological balance through staged hydraulic implementation."
+        >
+          <div class="project-card-visual project-card-visual--wide">
+            <span class="project-card-index" aria-hidden="true">06</span>
+            <img src="Images/Irrigation.png" alt="Irrigation Works Program" loading="lazy" width="900" height="600" />
           </div>
-          <h3>Irrigation Works Program</h3>
-          <p><strong>Challenge:</strong> deliver sustainable agricultural water systems for long-term rural resilience.<br /><strong>Solution:</strong> hydraulic engineering and staged implementation oversight.</p>
-          <div class="data-strip"><span>Ethiopia</span><span>Hydraulics</span><span>Multi-Phase</span></div>
-          <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          <div class="project-card-copy">
+            <h3>Irrigation Works Program</h3>
+            <p><strong>Challenge:</strong> deliver sustainable agricultural water systems for long-term rural resilience.<br /><strong>Solution:</strong> hydraulic engineering and staged implementation oversight.</p>
+            <div class="data-strip"><span>Ethiopia</span><span>Hydraulics</span><span>Multi-Phase</span></div>
+            <button class="btn secondary project-open" type="button">Enter Project Experience</button>
+          </div>
         </article>
       </div>
-
-      <section class="section">
-        <h2>3D Project Model</h2>
-        <div class="model-card">
-          <model-viewer
-            src="3d_assets/Hitem3d-1776090506237.glb"
-            camera-controls
-            auto-rotate
-            shadow-intensity="1"
-            alt="3D project model placeholder"
-          ></model-viewer>
-          <p class="model-placeholder">
-            Interactive model preview loaded from the local project GLB asset.
-          </p>
-        </div>
-      </section>
 
       <section class="section reveal">
         <div class="section-head"><span class="chapter-no">04</span><h2>Client Confidence Layer</h2></div>
