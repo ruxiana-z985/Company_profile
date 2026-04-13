@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Experience | HH Consulting</title>
+  <meta name="description" content="Immersive project experience for HH Consulting case studies." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <div class="top-progress"><div class="top-progress-bar" id="topProgressBar"></div></div>
+  <div class="nav-wrap container">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="brand-badge">HH</span><div><p>HH Consulting</p><p>Architects & Engineers PLC</p></div></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main class="section">
+    <div class="container reveal">
+      <div class="section-head"><span class="chapter-no">PX</span><h1 id="detailTitle">Project Experience</h1></div>
+    </div>
+
+    <section class="section project-immersive-top reveal">
+      <div class="three-stage-full">
+        <model-viewer
+          id="detailModelViewer"
+          class="detail-model-viewer"
+          camera-controls
+          auto-rotate
+          scale="1.45 1.45 1.45"
+          camera-orbit="20deg 72deg 65%"
+          field-of-view="24deg"
+          shadow-intensity="1"
+          exposure="1.1"
+          interaction-prompt="none"
+          alt="3D project model"
+        ></model-viewer>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container project-detail-stage reveal">
+        <div class="hero-visual detail-image-panel">
+          <img id="detailImage" alt="Project visual" />
+        </div>
+        <div class="card">
+          <h2>Project Narrative</h2>
+          <p class="description" id="detailDescription"></p>
+          <div class="data-strip project-modal-strip">
+            <span id="detailLocation"></span>
+            <span id="detailValue"></span>
+            <span id="detailDuration"></span>
+            <span id="detailTeam"></span>
+          </div>
+          <p class="model-placeholder">
+            Interactive 3D experience: drag to orbit, scroll to zoom, right-drag to pan.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><p class="copyright">© <span id="year"></span> HH Consulting Architects & Engineers PLC</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
